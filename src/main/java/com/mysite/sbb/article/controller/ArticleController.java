@@ -26,5 +26,4 @@ public class ArticleController {
     public List<Article> showList() {
         return articleRepository.findAll();
     }
-
 }
