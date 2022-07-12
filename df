@@ -1,0 +1,41 @@
+[33mcommit f801a0457a5d1e413e404a7a1c6951237b231e31[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Wed Jul 6 12:12:51 2022 +0900
+
+    게시물 삭제
+
+[33mcommit 760a05477660d16c3d06706d6e86913bfc35563b[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Wed Jul 6 11:43:06 2022 +0900
+
+    게시물 수정
+
+[33mcommit fb0ab42420523cc755df6981139dbb2fd718036c[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Wed Jul 6 10:51:15 2022 +0900
+
+    id에 따른 게ã시물 1건 조회
+
+[33mcommit 84060b4f660bc962fb66253ed275697bde3f0e4e[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Wed Jul 6 10:45:44 2022 +0900
+
+    게시물 1건 조회
+
+[33mcommit a2e598e1034ddcc1e094a40390622fef01f87830[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Tue Jul 5 12:10:38 2022 +0900
+
+    유저 정보 출력
+
+[33mcommit e8b4a6e95d2e707a2b374c487306dd2770ad7f6c[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Tue Jul 5 11:30:37 2022 +0900
+
+    게시물 ì정보 출력
+
+[33mcommit ad6f1120d6966d458c052150c51e223da16c6d2b[m
+Author: xanqus <sbk98031816@gmail.com>
+Date:   Tue Jul 5 10:08:16 2022 +0900
+
+    세팅
