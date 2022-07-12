@@ -26,7 +26,29 @@ public class ArticleController {
 
     @RequestMapping("/list")
     @ResponseBody
-    public List<Article> showArticleList() {
+    public List<Article> showArticleList(String title, String body) {
+        if(title != null && body == null) {
+            if(articleRepository.existsByTitle(title) == false) {
+                System.out.println("제목과 일치하는 게시물이 없습니다.");
+                return null;
+            }
+            return articleRepository.findByTitle(title);
+
+        } else if(title == null && body != null) {
+            if(articleRepository.existsByBody(body) == false) {
+                System.out.println("내용과 일치하는 게시물이 없습니다.");
+                return null;
+            }
+            return articleRepository.findByBody(body);
+
+        } else if(title != null && body != null) {
+            if(articleRepository.existsByTitleAndBody(title, body) == false) {
+                System.out.println("제목, 내용과 일치하는 게시물이 없습니다.");
+                return null;
+            }
+            return articleRepository.findByTitleAndBody(title, body);
+        }
+
         return articleRepository.findAll();
     }
 
@@ -68,11 +90,32 @@ public class ArticleController {
 
     }
 
-    @RequestMapping("findByTitle")
+
+    @RequestMapping("/doWrite")
     @ResponseBody
-    public List<Article> findByTitle(String title) {
-        List<Article> articles = articleRepository.findByTitle(title);
-        return articles;
+    public String doWrite(String title, String body) {
+        if ( title == null || title.trim().length() == 0 ) {
+            return "제목을 입력해주세요.";
+        }
+
+        title = title.trim();
+
+        if ( body == null || body.trim().length() == 0 ) {
+            return "내용을 입력해주세요.";
+        }
+
+        body = body.trim();
+
+        Article article = new Article();
+        article.setRegDate(LocalDateTime.now());
+        article.setUpdateDate(LocalDateTime.now());
+        article.setTitle(title);
+        article.setBody(body);
+
+        articleRepository.save(article);
+
+        return "%d번 게시물이 생성되었습니다.".formatted(article.getId());
     }
+
 
 }
