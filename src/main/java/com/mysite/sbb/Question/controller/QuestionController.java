@@ -28,7 +28,7 @@ public class QuestionController {
     }
 
     @RequestMapping("/detail/{id}")
-    public String showQuestions(Model model, @PathVariable("id") Integer id) {
+    public String detail(Model model, @PathVariable("id") Integer id) {
         Question question = this.questionService.getQuestion(id);
         model.addAttribute("question", question);
 
