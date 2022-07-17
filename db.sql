@@ -28,7 +28,7 @@ content = '질문내용 3';
 CREATE TABLE answer (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   create_date DATETIME NOT NULL,
-  question_id BIGINT UNSIGNED NOT NULL,
+  question_id int UNSIGNED NOT NULL,
   content TEXT NOT NULL,
   `reply_like` VARCHAR(10) NOT NULL
 );
